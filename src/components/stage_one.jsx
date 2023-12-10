@@ -41,10 +41,24 @@ const Stage1 = () => {
 
                 { context.players && context.players.length > 0 ?
                 <>
-                <hr/>
+                    <hr/>
+                    <div>
+                        <ul className='list-group'>
+                            { context.players.map((player,idx)=>(
+                                <li key={idx} className='list-group-item d-flex justify-content-between align-items-center list-group-item-action'>
+                                    {player}
+                                    <span
+                                        className='badge badge-danger'
+                                        onClick={()=> alert('delete')}
+                                    >
+                                        X
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </>
                 :null
-
                 }
 
 

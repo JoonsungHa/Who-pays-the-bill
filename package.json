@@ -1,5 +1,5 @@
 {
-  
+  "homepage": "https://github.com/JoonsungHa/Who-pays-the-bill.git",
   "name": "whopaysthebill",
   
   "private": true,
@@ -12,6 +12,8 @@
   
     
   "dev": "vite",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages d-build",
   
     
   "build": "vite build",

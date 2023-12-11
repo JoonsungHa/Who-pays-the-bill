@@ -42,7 +42,6 @@ const Stage1 = () => {
 
 
 
-    console.log(context)
 
 
 

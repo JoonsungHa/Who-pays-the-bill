@@ -3,6 +3,7 @@ import { useContext } from 'react';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import "./style/app.css";
 
 import Stage1 from "./components/stage_one";

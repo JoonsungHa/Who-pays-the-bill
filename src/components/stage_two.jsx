@@ -16,6 +16,26 @@ const Stage2 = () => {
 
 
             </div>
+
+
+            <div 
+                className = "action_button"
+                onClick={() => context.resetGame()}
+            >
+
+            Start Over
+
+            </div>
+
+
+            <div 
+                className = "action_button btn_2"
+                onClick={() => context.getNewLooser()}
+            >
+
+            Get new looser
+
+            </div>
         </>
     )
 }

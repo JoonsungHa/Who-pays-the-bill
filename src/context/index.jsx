@@ -17,6 +17,31 @@ const MyProvider = (props) => {
         ));
     }
 
+    const removePlayerHandler = (idx) => {
+        let newArray = [...players];
+        newArray.splice(idx,1);
+
+        setPlayers(newArray);
+
+    }
+
+    const nextHandler = () => {
+        if (players.length < 2) {
+            alert("nope");
+        } else {
+            setStage(2);
+            setTimeout(() =>{
+                generateLoser();
+            }, 2000)
+        }
+
+    }
+
+    const generateLoser = () => {
+        let result = players[Math.floor(Math.random()*players.length)];
+        setResult(result);
+    }
+
 
 
     return (
@@ -24,7 +49,9 @@ const MyProvider = (props) => {
             stage:stage,
             players:players,
             result:result,
-            addPlayer:addPlayerHandler
+            addPlayer:addPlayerHandler,
+            removePlayer:removePlayerHandler,
+            next:nextHandler
 
         }}>
             {props.children}

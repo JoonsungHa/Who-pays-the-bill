@@ -1,9 +1,21 @@
+import { useContext, useRef, useState} from "react";
+
+import { MyContext } from "../context";
+
 
 const Stage2 = () => {
 
+    const context = useContext(MyContext);
+
+
     return (
         <>
-            Stage two
+            <div className="result_wrapper">
+                <h3>The loser is:</h3>
+                {context.result}
+
+
+            </div>
         </>
     )
 }
